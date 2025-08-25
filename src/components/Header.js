@@ -58,18 +58,18 @@ return ()=>unsubscribe();
   }
 
   return (
-    <div className='absolute flex w-screen px-8 py-2 z-10 bg-gradient-to-b from-black justify-between'>
-        <img className="w-44" src = {LOGO}
+    <div className='absolute flex w-screen px-8 py-2 z-10 bg-gradient-to-b from-black flex-col md:flex-row justify-between'>
+        <img className="w-44 mx-auto md:mx-0" src = {LOGO}
         alt ="logo"
         />
-        {user && <div className='flex p-2'>
+        {user && <div className='justify-between flex p-2'>
           {showGptSearch &&
           <select onChange={handleLanguageChange} className='rounded bg-gray-600 p-2 m-2'>
             {SUPPORTED_LANGUAGES.map((lang)=>(<option key={lang.identifier} value={lang.identifier}>{lang.name}</option>))}
           </select>
         }
           <button onClick={handleGptSearchClick} className='bg-purple-600 rounded-lg px-4 py-2 mx-4 my-2'>{showGptSearch?"Homepage":"GPT Search"}</button>
-          <img className="w-12 h-12" alt = "user-Icon" src={user?.photoURL} />
+          <img className="hidden md:inline-block w-12 h-12" alt = "user-Icon" src={user?.photoURL} />
           <button onClick={handleSignOut} className='font-bold text-white'>SignOut</button>
         </div>}
     </div>

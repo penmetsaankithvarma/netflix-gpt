@@ -36,6 +36,15 @@
   ->GPT search page
   ->GPT search bar
   ->Multi language feature in our app in GPT search page
+  ->Get OpenAI Api key
+  ->GPT search API call
+  ->Fetched gptmoviesuggestions from TMDB
+  ->Created getSlice added data
+  ->Reused movie list components to make movie suggestion container 
+  ->Memoization
+  ->Added .env file
+  ->Adding .env file to gitignore 
+  ->Made our site responsive
 
 
 
